@@ -3,7 +3,7 @@ package com.automatization.training.variables1;
 public class Main {
 
     public static void main(String[] args) {
-
+        String testGit = "GitHub";
         int myAge = 25;
         long mySalary = 10000;
 
