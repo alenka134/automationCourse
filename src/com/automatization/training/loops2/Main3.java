@@ -9,6 +9,7 @@ public class Main3 {
         String outPutText = "Enter your number: ";
         System.out.println(outPutText);
         Scanner num = new Scanner(System.in);
+
         while ((input = num.nextInt()) != -1) {
             System.out.println("number: " + input);
 
@@ -23,6 +24,7 @@ public class Main3 {
         }
         if (input == -1) {
             System.out.println("Number: " + input + "--> end program");
+            System.out.println();
         }
     }
 }
