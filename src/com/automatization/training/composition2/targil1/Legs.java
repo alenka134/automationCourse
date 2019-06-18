@@ -4,7 +4,7 @@ public class Legs {
     private int lenghtLegs;
     private String colorLegs;
 
-    public Legs(int lenghtLegs, String colorLegs){
+    public Legs(int lenghtLegs, String colorLegs) {
         this.lenghtLegs = lenghtLegs;
         this.colorLegs = colorLegs;
     }

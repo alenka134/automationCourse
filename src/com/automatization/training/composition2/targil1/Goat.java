@@ -65,9 +65,10 @@ public class Goat {
     public void setTail(Tail tail) {
         this.tail = tail;
     }
-public void printGoat(){
-    System.out.println("The goat is " +getAge() + " years old , his color is " + getColorGoat() + " and weight: " + getWeight() + "kg");
-    System.out.println("This goat also has " + legs.getLenghtLegs() + "cm long legs, painted " + legs.getColorLegs()+ ", a long beard: " + beard.getLengthBeard() + "cm, painted " + beard.getColorBeard() +" and long tail: "+ tail.getLengthTail() + "cm\n");
-}
+
+    public void printGoat() {
+        System.out.println("The goat is " + getAge() + " years old , his color is " + getColorGoat() + " and weight: " + getWeight() + "kg");
+        System.out.println("This goat also has " + legs.getLenghtLegs() + "cm long legs, painted " + legs.getColorLegs() + ", a long beard: " + beard.getLengthBeard() + "cm, painted " + beard.getColorBeard() + " and long tail: " + tail.getLengthTail() + "cm\n");
+    }
 }
 

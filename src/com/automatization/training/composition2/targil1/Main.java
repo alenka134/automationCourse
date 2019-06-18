@@ -6,6 +6,7 @@ public class Main {
         Beard beard = new Beard("grey", 10);
         Tail tail = new Tail(10);
         Legs[] legs = new Legs[4];
+
         legs[0] = new Legs(45, "white");
         legs[1] = new Legs(45, "white");
         legs[2] = new Legs(48, "black");

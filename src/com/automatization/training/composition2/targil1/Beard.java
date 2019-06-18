@@ -4,10 +4,9 @@ public class Beard {
     private String colorBeard;
     private int lengthBeard;
 
-    public Beard(String colorBeard, int lengthBeard){
+    public Beard(String colorBeard, int lengthBeard) {
         this.colorBeard = colorBeard;
         this.lengthBeard = lengthBeard;
-
     }
 
     public String getColorBeard() {
