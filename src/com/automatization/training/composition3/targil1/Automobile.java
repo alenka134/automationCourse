@@ -100,9 +100,11 @@ public class Automobile {
     }
 
     public void changePancher() {
+
         for (int i = 0; i < this.wheels.length; i++) {
             if (wheels[i].getActualAirPressure() == 0.0) {
-                // System.out.println("\nAir pressure in the wheel: " + (i + 1) + " is zero. You have to change it on spare wheel: " + (wheels.length));
+
+               // System.out.println("\nAir pressure in the wheel: " + (i + 1) + " is zero. You have to change it on spare wheel: " + (wheels.length));
                 System.out.println("You have to change the wheel number # " + (i + 1) + " to spare wheel ");
             }
         }

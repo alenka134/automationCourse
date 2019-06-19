@@ -5,12 +5,12 @@ public class Main {
 
         Beard beard = new Beard("grey", 10);
         Tail tail = new Tail(10);
-        Legs[] legs = new Legs[4];
+        Leg[] legs = new Leg[4];
 
-        legs[0] = new Legs(45, "white");
-        legs[1] = new Legs(45, "white");
-        legs[2] = new Legs(48, "black");
-        legs[3] = new Legs(48, "black");
+        legs[0] = new Leg(45, "white");
+        legs[1] = new Leg(45, "white");
+        legs[2] = new Leg(48, "black");
+        legs[3] = new Leg(48, "black");
         Goat taish1 = new Goat(3, 45.5, "white", beard, legs[1], tail);
         Goat taish2 = new Goat(2, 35.5, "black", beard, legs[3], tail);
 

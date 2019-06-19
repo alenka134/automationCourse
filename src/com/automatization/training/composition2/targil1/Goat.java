@@ -5,16 +5,16 @@ public class Goat {
     private double weight;
     private String colorGoat;
     private Beard beard;
-    private Legs legs;
+    private Leg leg;
     private Tail tail;
 
 
-    public Goat(int age, double weight, String colorGoat, Beard beard, Legs legs, Tail tail) {
+    public Goat(int age, double weight, String colorGoat, Beard beard, Leg leg, Tail tail) {
         this.age = age;
         this.weight = weight;
         this.colorGoat = colorGoat;
         this.beard = beard;
-        this.legs = legs;
+        this.leg = leg;
         this.tail = tail;
     }
 
@@ -50,12 +50,12 @@ public class Goat {
         this.beard = beard;
     }
 
-    public Legs getLegs() {
-        return legs;
+    public Leg getLeg() {
+        return leg;
     }
 
-    public void setLegs(Legs legs) {
-        this.legs = legs;
+    public void setLeg(Leg leg) {
+        this.leg = leg;
     }
 
     public Tail getTail() {
@@ -68,7 +68,7 @@ public class Goat {
 
     public void printGoat() {
         System.out.println("The goat is " + getAge() + " years old , his color is " + getColorGoat() + " and weight: " + getWeight() + "kg");
-        System.out.println("This goat also has " + legs.getLenghtLegs() + "cm long legs, painted " + legs.getColorLegs() + ", a long beard: " + beard.getLengthBeard() + "cm, painted " + beard.getColorBeard() + " and long tail: " + tail.getLengthTail() + "cm\n");
+        System.out.println("This goat also has " + leg.getLenghtLeg() + "cm long legs, painted " + leg.getColorLeg() + ", a long beard: " + beard.getLengthBeard() + "cm, painted " + beard.getColorBeard() + " and long tail: " + tail.getLengthTail() + "cm\n");
     }
 }
 
