@@ -79,9 +79,10 @@ public class Automobile {
         this.wheels = wheels;
     }
 
+//Printout all the wheels with air pressure
     public void printAirPressureInAllWheels() {
         for (int i = 0; i < this.wheels.length; i++) {
-            System.out.println("Number of the wheel is " + (i + 1) + " air pressure inside is: " + wheels[i].getActualAirPressure());
+            System.out.println("The number of the wheel is " + (i + 1) + " air pressure inside is: " + wheels[i].getActualAirPressure());
         }
     }
 
@@ -90,7 +91,7 @@ public class Automobile {
         for (int i = 0; i < this.wheels.length; i++) {
             if (wheels[i].getActualAirPressure() < 25.0) {
                 puncher = true;
-                System.out.println("\nAlert message: Low air pressure in the wheel is: " + (i + 1) + " air pressure inside is: " + wheels[i].getActualAirPressure());
+                System.out.println("\nAlert message: Low air pressure in the wheel is: " + (i + 1) + " air pressure inside is: " + wheels[i].getActualAirPressure()+"\n");
             }
         }
 
@@ -102,10 +103,15 @@ public class Automobile {
     public void changePancher() {
 
         for (int i = 0; i < this.wheels.length; i++) {
+            System.out.println("Number of the wheel is " + (i + 1) + " air pressure inside is: " + wheels[i].getActualAirPressure());
             if (wheels[i].getActualAirPressure() == 0.0) {
 
-               // System.out.println("\nAir pressure in the wheel: " + (i + 1) + " is zero. You have to change it on spare wheel: " + (wheels.length));
-                System.out.println("You have to change the wheel number # " + (i + 1) + " to spare wheel ");
+                Wheel pancherWheel=wheels[i];
+                wheels[i] = wheels[4];
+                wheels[4] = pancherWheel ;
+
+                System.out.println("The program is changing the wheel number # " + (i + 1) + " to spare wheel and now:\n");
+                System.out.println("Number of the wheel is " + (i + 1) + " air pressure inside is: " + wheels[i].getActualAirPressure());
             }
         }
         if (wheels[4].getActualAirPressure() == 0.0) {
