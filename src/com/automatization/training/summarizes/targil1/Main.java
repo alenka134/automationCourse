@@ -58,6 +58,7 @@ public class Main {
                     break;
                 case 3:
                     //print sum all perimeters and sum all areas
+                    totals(listOfShapes);
                     break;
                 case 4:
                     //print biggest perimeter and biggest area
@@ -68,6 +69,16 @@ public class Main {
             }
         }
         System.out.println("End program");
+    }
+
+    private static void totals(ArrayList<Shape> shapeArrayList){
+        double totalP = 0.0;
+        double totalA = 0.0;
+        for (Shape shape : shapeArrayList){
+            totalP = totalP+shape.calcPerimeter();
+            totalA = totalA+shape.calcArea();
+        }
+        System.out.println("Sum perimeter: " + totalP + " and Sum area: " + totalA);
     }
 }
 

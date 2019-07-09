@@ -6,7 +6,7 @@ public class RightTriangle extends Shape {
     private double height3;
 
     public void printData() {
-        System.out.println("Right Triangle: height1 = " + getHeight1() + " and height2 + " + getHeight2());
+        System.out.println("Right Triangle: height1 = " + getHeight1() + " and height2 = " + getHeight2());
         System.out.println("Right Triangle perimeter is: " + calcPerimeter() + " and area is: " + calcArea());
     }
     public double calcPerimeter() {
