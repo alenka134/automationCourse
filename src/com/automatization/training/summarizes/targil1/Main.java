@@ -17,39 +17,18 @@ public class Main {
         while (doExit == false) {
             //Main menu
             int choiceMenu = Menu.showMainMenu();
-            CreateShape createShape = new CreateShape();
 
             //  System.out.println("User selected " + choiceMenu);
-            switch (choiceMenu) {
-                case 11:
-                    //add a Square
-                    Square square = createShape.addSquare();
-                    if (square != null) {
-                        listOfShapes.add(square);
-                    }
-                    break;
-                case 12:
-                    //add a Circle
-                    Circle circle = createShape.addCircle();
-                    if (circle != null) {
-                        listOfShapes.add(circle);
-                    }
-                    break;
-                case 13:
-                    //add a Right Triangle
-                    RightTriangle rightTriangle = createShape.addRightTriangle();
-                    if (rightTriangle != null) {
-                        listOfShapes.add(rightTriangle);
-                    }
-                    break;
-                case 14:
-                    //add a Rectangle
-                    Rectangle rectangle = createShape.addRectangle();
-                    if (rectangle != null) {
-                        listOfShapes.add(rectangle);
-                    }
-                    break;
+            if (choiceMenu >= 11 && choiceMenu <= 14) {
+                ChooseShape chooseShape = new ChooseShape();
+               Shape newShape = chooseShape.getShape(choiceMenu);
+               if(newShape!=null){
+                   listOfShapes.add(newShape);
+               }
 
+            }
+
+            switch (choiceMenu) {
                 case 2:
                     //print all shapes
                     printShapes(listOfShapes);
