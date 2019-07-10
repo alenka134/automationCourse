@@ -8,7 +8,7 @@ public class Menu {
         //Loop which will always run
         while (true) {
 
-            System.out.println("Type 1 to add a shape");
+            System.out.println("MAIN MENU:\nType 1 to add a shape");
             System.out.println("Type 2 to print all the shapes");
             System.out.println("Type 3 to print Sum of all perimeters and Sum of all areas");
             System.out.println("Type 4 to print the biggest perimeter and the biggest area");
@@ -31,6 +31,8 @@ public class Menu {
                             return 13;
                         case 4:
                             return 14;
+                        case 5:
+                            return 15;
                     }
                     break;
                 case 2:
@@ -48,11 +50,11 @@ public class Menu {
     public static int showShapesMenu() {
         while (true) {
 
-            System.out.println("\tType 1 to add a square");
-            System.out.println("\tType 2 to add a circle");
-            System.out.println("\tType 3 to add a right triangle");
-            System.out.println("\tType 4 to add a rectangle");
-            System.out.println("\tType 5 to return to main menu");
+            System.out.println("\tType 1 to add a SQUARE");
+            System.out.println("\tType 2 to add a CIRCLE");
+            System.out.println("\tType 3 to add a RIGHT TRIANGLE");
+            System.out.println("\tType 4 to add a RECTANGLE");
+            System.out.println("\tType 5 to return to Main Menu");
 
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
@@ -66,9 +68,3 @@ public class Menu {
     }
 }
 
-
-//Sum all circumferences
-//Sum all areas
-//Find biggest circumference
-//Find biggest area
-//Exit

@@ -3,8 +3,6 @@ package com.automatization.training.summarizes.targil1;
 import java.util.ArrayList;
 
 public class Main {
-
-
     public static void printShapes(ArrayList<Shape> shapes) {
         for (Shape s : shapes) {
             s.printData();
@@ -14,14 +12,14 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Shape> listOfShapes = new ArrayList<>();
-
         boolean doExit = false;
 
         while (doExit == false) {
             //Main menu
             int choiceMenu = Menu.showMainMenu();
             CreateShape createShape = new CreateShape();
-            System.out.println("User selected " + choiceMenu);
+
+            //  System.out.println("User selected " + choiceMenu);
             switch (choiceMenu) {
                 case 11:
                     //add a Square
@@ -62,6 +60,7 @@ public class Main {
                     break;
                 case 4:
                     //print biggest perimeter and biggest area
+                    maxPerimeterMaxArea(listOfShapes);
                     break;
                 case 5:
                     doExit = true;
@@ -71,14 +70,24 @@ public class Main {
         System.out.println("End program");
     }
 
-    private static void totalsSums(ArrayList<Shape> shapeArrayList){
+    private static void totalsSums(ArrayList<Shape> shapeArrayList) {
         double totalSumP = 0.0;
         double totalSumA = 0.0;
-        for (Shape shape : shapeArrayList){
-            totalSumP = totalSumP+shape.calcPerimeter();
-            totalSumA = totalSumA+shape.calcArea();
+        for (Shape shape : shapeArrayList) {
+            totalSumP = totalSumP + shape.calcPerimeter();
+            totalSumA = totalSumA + shape.calcArea();
         }
         System.out.println("Sum perimeter: " + totalSumP + " and Sum area: " + totalSumA);
+    }
+
+    private static void maxPerimeterMaxArea(ArrayList<Shape> shapeArrayList) {
+        double maxPerimeter = 0.0;
+        double maxArea = 0.0;
+        for (Shape shape : shapeArrayList) {
+            maxPerimeter = Math.max(maxPerimeter, shape.calcPerimeter());
+            maxArea = Math.max(maxArea, shape.calcArea());
+        }
+        System.out.println("Max perimeter is: " + maxPerimeter + " and max area is: " + maxArea);
     }
 }
 
